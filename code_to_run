@@ -1,6 +1,9 @@
 from user import usuario
-
+from movies import movie
+'''
 user1 = usuario(input("escribe tu usuario: "),input("escribe tu password: "))
 print(user1)
 user1.conectar()
 print(user1)
+'''
+movie.registrarHoras()
