@@ -1,9 +1,21 @@
 from user import usuario
 from movies import movie
-'''
+
+print("Se haran los registros de informacion sobre las peliculas y horas de transmision")
+print("")
+print("")
+movie.registrarPelicula()
+movie.registrarHoras()
+
+print("")
+print("")
+print("LOGIN")
 user1 = usuario(input("escribe tu usuario: "),input("escribe tu password: "))
 print(user1)
 user1.conectar()
 print(user1)
-'''
-movie.registrarHoras()
+print("")
+print("")
+movie.mostrarPeliculas()
+movie.mostrarHoras()
+

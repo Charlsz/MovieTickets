@@ -15,11 +15,17 @@ class movie():
         self.numTickets = numTickets
     
     def registrarPelicula():
+        '''
+        registramos las peliculas disponibles
+        '''
         nombrePelicula = input("Ingresa nombre de pelicula a transmitir: ")
         peliculas.append(nombrePelicula)
-        print("Las peliculas disponibles son:" *peliculas, sep = "\n")
+        print("Las peliculas disponibles son:", *peliculas, sep = "\n")
         
     def registrarHoras():
+        '''
+        registramos las horas disponibles
+        '''
         print("TIEMPO EN HORA MILITAR")
         print("tenga en cuenta que solo será a horas puntuales")
         try:
@@ -33,3 +39,8 @@ class movie():
         except TypeError:
             print("No se aceptan letras en las horas")
         
+    def mostrarPeliculas():
+        print("Las peliculas disponibles son:", *peliculas, sep = "\n")
+        
+    def mostrarHoras():
+        print("Las horas disponibles son: ", *horas)
