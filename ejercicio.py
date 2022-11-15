@@ -1,6 +1,6 @@
 """
 Python 3 Object-Oriented Programming
-Chapter 11. Common Design Patterns
+Chapter 11. Common Design Patterns - State design patter
 """
 from __future__ import annotations
 from typing import Optional, Iterable, Iterator, cast
@@ -43,6 +43,9 @@ class Header(NMEA_State):
 
 
 class Body(NMEA_State):
+    '''
+    esta es la clase madre (superclase) que es la que va a llamar a las otras clases para obtener sus metodos
+    '''
     def feed_byte(self, input: int) -> NMEA_State:
         if input == ord(b"$"):
             return Header(self.message)
@@ -53,6 +56,9 @@ class Body(NMEA_State):
 
 
 class Checksum(NMEA_State):
+    '''
+    aqui para lo mismo que en en la clase anterior, se invocan los metodos de la super clase NMEA_state
+    '''
     def feed_byte(self, input: int) -> NMEA_State:
         if input == ord(b"$"):
             return Header(self.message)
