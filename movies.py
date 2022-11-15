@@ -8,11 +8,8 @@ peliculas=[]
 horas=[]
 class movie():
     
-    def __init__(self,pelicula,tickets,numTickets):
+    def __init__(self,pelicula):
         self.pelicula = pelicula
-        self.tickets = tickets
-        
-        self.numTickets = numTickets
     
     def registrarPelicula():
         '''
