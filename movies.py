@@ -24,12 +24,12 @@ class movie():
         print("tenga en cuenta que solo será a horas puntuales")
         try:
             times = input("Ingresa la hora a la que se reproducira la pelicula: ")
-            if times>24:
+            if (times == 25):
                 print("Error, hora no valida")
                 times = input("Escriba de nuevo la hora: ")
             else:
                 horas.append(times)
-            print("Las peliculas disponibles son: " *horas)
+            print("Las horas disponibles son: ", *horas)
         except TypeError:
-            print("No se aceptan valores String")
+            print("No se aceptan letras en las horas")
         
