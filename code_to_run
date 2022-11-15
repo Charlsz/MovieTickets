@@ -1,0 +1,6 @@
+from user import usuario
+
+user1 = usuario(input("escribe tu usuario: "),input("escribe tu password: "))
+print(user1)
+user1.conectar()
+print(user1)
